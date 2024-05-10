@@ -124,7 +124,7 @@ The timeline components are used to confirm the CV.
 
 #### Card & HorizontalCard
 
-The cards are primarly used for the Project and the Blog components. They include a picture, a title, and a description. 
+The cards are primarly used for the Project and the Blog components. They include a picture, a title, and a description.
 
 ```html
 <HorizontalCard title="Card Title" img="imge_url" desc="Description" url="Link
@@ -133,7 +133,6 @@ tags={['Array','of','tags']} />
 ```
 
 #### HorizontalCard Shop Item
-
 
 This component is already included in the Store layout of the template. In case you want to use it in another place these are the props.
 
@@ -155,26 +154,27 @@ This component is already included in the Store layout of the template. In case 
 
 #### Adding a Custom Component
 
-To add a custom component, you can create a .astro file in the components folder under the source folder. 
+To add a custom component, you can create a .astro file in the components folder under the source folder.
 
-Components must follow this template. The ```---``` represents the code fence and uses Javascript and can be used for imports. 
+Components must follow this template. The `---` represents the code fence and uses Javascript and can be used for imports.
 
-The HTML component is the actual style of your new component. 
+The HTML component is the actual style of your new component.
 
 ```html
 ---
 // Component Script (JavaScript)
 ---
+
 <!-- Component Template (HTML + JS Expressions) -->
 ```
 
-For more details, see the [astro components](https://docs.astro.build/en/core-concepts/astro-components/) documentation here. 
+For more details, see the [astro components](https://docs.astro.build/en/core-concepts/astro-components/) documentation here.
 
 ### Layouts
 
 Include `BaseLayout` in each page you add and `PostLayout` to your post pages.
 
-The BaseLayout defines a general template for each new webpage you want to add. It imports constants SITE_TITLE and SITE_DESCRIPTION which can be modified in the ```../config``` folder. Data placed there can be imported anywhere using import. 
+The BaseLayout defines a general template for each new webpage you want to add. It imports constants SITE_TITLE and SITE_DESCRIPTION which can be modified in the `../config` folder. Data placed there can be imported anywhere using import.
 
 ### Content
 
@@ -272,18 +272,18 @@ The configuration for the deployment varies depending on the platform where you 
 
 Suggestions and pull requests are welcomed! Feel free to open a discussion or an issue for a new feature request or bug.
 
-One of the best ways to contribute is to grab a [bug report or feature suggestion](https://github.com/manuelernestog/astrofy/issues) that has been marked `accepted` and dig in.
+One of the best ways to contribute is to grab a [bug report or feature suggestion](https://github.com/jetjadeja/astrofy/issues) that has been marked `accepted` and dig in.
 
 Please be wary of working on issues _not_ marked as `accepted`. Just because someone has created an issue doesn't mean we'll accept a pull request for it.
 
 ## License
 
-Astrofy is licensed under the MIT license — see the [LICENSE](https://github.com/manuelernestog/astrofy/blob/main/LICENSE) file for details.
+Astrofy is licensed under the MIT license — see the [LICENSE](https://github.com/jetjadeja/astrofy/blob/main/LICENSE) file for details.
 
 ## Contributors
 
-<a href="https://github.com/manuelernestog/astrofy/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=manuelernestog/astrofy" />
+<a href="https://github.com/jetjadeja/astrofy/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=jetjadeja/astrofy" />
 </a>
 
 Made with [contrib.rocks](https://contrib.rocks).
