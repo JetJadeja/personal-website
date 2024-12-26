@@ -209,10 +209,32 @@ function Layout({ children }: ILayoutProps) {
   // Glitch effect
   useEffect(() => {
     let glitchTimer: number | undefined;
+    let heroGlitchTimer: number | undefined;
 
-    // Slightly higher randomness so glitch is less frequent overall.
+    // Hero glitch effect - more frequent (every 500ms)
+    const runHeroGlitchCycle = () => {
+      const heroElements = document.querySelectorAll(".hero-glitch-target");
+      if (heroElements.length > 0) {
+        heroElements.forEach((el) => {
+          const target = el as HTMLElement;
+          // Randomly decide whether to glitch this cycle
+          if (Math.random() < 0.7) {
+            // 70% chance to glitch
+            target.classList.add("glitch-text");
+            setTimeout(() => {
+              target.classList.remove("glitch-text");
+            }, 150); // Shorter duration for more rapid glitches
+          }
+        });
+      }
+      heroGlitchTimer = window.setTimeout(runHeroGlitchCycle, 200); // Run more frequently
+    };
+
+    // Regular glitch effect - less frequent
     const runGlitchCycle = () => {
-      const glitchableEls = document.querySelectorAll(".glitch-target");
+      const glitchableEls = document.querySelectorAll(
+        ".glitch-target:not(.hero-glitch-target)"
+      );
       if (glitchableEls.length > 0) {
         // Single glitch at a time
         const randIndex = Math.floor(Math.random() * glitchableEls.length);
@@ -227,11 +249,17 @@ function Layout({ children }: ILayoutProps) {
         1800 + Math.random() * 2000
       );
     };
+
+    // Start both cycles
     glitchTimer = window.setTimeout(runGlitchCycle, 2000);
+    heroGlitchTimer = window.setTimeout(runHeroGlitchCycle, 500);
 
     return () => {
       if (glitchTimer) {
         window.clearTimeout(glitchTimer);
+      }
+      if (heroGlitchTimer) {
+        window.clearTimeout(heroGlitchTimer);
       }
     };
   }, []);
