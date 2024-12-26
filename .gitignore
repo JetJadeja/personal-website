@@ -1,6 +1,8 @@
 # build output
 dist/
 .cache
+build/
+
 # dependencies
 node_modules/
 

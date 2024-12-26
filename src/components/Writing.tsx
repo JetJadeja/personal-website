@@ -8,7 +8,7 @@ function Writing() {
     return new Date(b.date).getTime() - new Date(a.date).getTime();
   });
 
-  return (
+  return sortedArticles.length > 0 ? (
     <section className="min-h-screen px-4 sm:px-8 py-16 bg-black text-white">
       <h2 className="text-5xl sm:text-6xl md:text-7xl font-extrabold uppercase mb-12 text-center glitch-target">
         Writing
@@ -35,6 +35,8 @@ function Writing() {
         ))}
       </div>
     </section>
+  ) : (
+    <></>
   );
 }
 
