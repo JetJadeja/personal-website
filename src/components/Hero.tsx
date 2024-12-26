@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Socials from "./Socials";
 
 function Hero() {
   const [scrollTop, setScrollTop] = useState<number>(0);
@@ -34,8 +35,13 @@ function Hero() {
                    "
         style={{ textShadow: "0 0 8px #ff00ff" }}
       >
-        Building brutal, high-impact web experiences
+        working on what excites me
       </p>
+
+      {/* Social Links */}
+      <div className="mb-12">
+        <Socials />
+      </div>
 
       {/* Scroll Down Indicator - fades out when scrolled */}
       <div

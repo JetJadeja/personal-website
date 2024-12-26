@@ -8,18 +8,26 @@ function About() {
       </h2>
       <div className="max-w-3xl text-center space-y-6 text-lg leading-relaxed">
         <p>
-          I’m a dedicated creator of modern tech, pushing boundaries in web3, DeFi, 
-          and beyond. I explore new frontiers, experiment boldly, and build solutions 
-          that question the norm.
+          I’m a freshman at the USC Iovine and Young Academy, working at the
+          intersection of engineering, design, and business. My focus is on
+          building projects that challenge the status quo, creating spaces that
+          connect and inspire, and exploring the intersection of technology and
+          human connection.
         </p>
-        <p>
-          Whether I’m refining protocols or mentoring fellow devs, my mission is to 
-          ignite fresh ideas and prove that the improbable can be achieved. 
-        </p>
+
+        {/* <p>
+          I started learning to code when I was 10, and I've been building
+          projects ever since. Over the last few years, however, I've taken a
+          break from work. I've focused more on the human experience. I've
+          learned to appreciate art and fashion, and I've enjoyed the moment and
+          the journey.
+        </p> */}
+
         {/* Updated line to be bold but less cringe */}
-        <p className="font-bold tracking-wide uppercase mt-8 glitch-target">
-          I am not just a developer.<br />
-          I tear down barriers and shape the future.
+        <p className="font-bold tracking-wide uppercase mt-10 glitch-target">
+          WHAT EXISTS IS ONLY PART OF THE STORY.
+          <br />
+          NOTHING HERE IS FINAL.
         </p>
       </div>
     </section>

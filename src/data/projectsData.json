@@ -1,58 +1,46 @@
 [
   {
-    "title": "Fuse v2",
-    "description": "A highly gas-optimized DeFi lending protocol for Rari Capital, cutting user fees by ~90%."
-  },
-  {
     "title": "Huff",
-    "description": "Revitalized an Ethereum assembly language with 50-90% efficiency gains over existing tools."
+    "description": "One of Ethereum's top smart contract languages, with 50-90% efficiency gains over existing tools.",
+    "link": "https://huff.sh"
   },
   {
-    "title": "Tanks",
-    "description": "DeFi product for depositing any asset and earning revenue; coded smart contracts & UI."
+    "title": "Muse",
+    "description": "Hosting dinners for USC's most ambitious students.",
+    "link": "https://www.instagram.com/muse.society.co/"
   },
   {
-    "title": "HackEDU",
-    "description": "Combined coding classes for underprivileged students with an AI-powered learning platform."
+    "title": "Fuse v2",
+    "description": "A highly gas-optimized DeFi lending protocol for Rari Capital, cutting user fees by ~90%.",
+    "link": "https://github.com/jetjadeja/generalized-lending-protocol"
   },
   {
-    "title": "Waymont Custody Solution",
-    "description": "Secure crypto custody platform; designed web & mobile apps with an intuitive user experience."
-  },
-  {
-    "title": "Generalized Lending Protocol",
-    "description": "Modern, gas-optimized blockchain lending protocol for isolated lending markets."
-  },
-  {
-    "title": "Move Oracles for the Sui Ecosystem",
-    "description": "Created Move modules to bring off-chain data onto Sui, enabling new DeFi use-cases."
-  },
-  {
-    "title": "Translator Pro",
-    "description": "Advanced GPT-4 translation tool more accurate and contextual than mainstream alternatives."
+    "title": "Vaults v2",
+    "description": "Gas-efficient yield aggregator protocol for earning interest on ERC20 tokens.",
+    "link": "https://github.com/Rari-Capital/vaults"
   },
   {
     "title": "Flash Loan Workshop",
-    "description": "Led workshops at UPenn, teaching flash loan implementation in DeFi applications."
+    "description": "Led a workshop at UPenn when I was a junior in high school, teaching flash loan implementation in DeFi applications.",
+    "link": "https://github.com/jetjadeja/flash-loan-workshop"
   },
   {
-    "title": "Vaults for Rari Capital",
-    "description": "Gas-efficient yield aggregator protocol for earning interest on ERC20 tokens."
+    "title": "Sui Move Oracles",
+    "description": "First ever Move oracle implementation for the Sui Ecosystem.",
+    "link": "https://github.com/pentagonxyz/move-oracles"
   },
   {
-    "title": "Solmate",
-    "description": "Advised on a secure, gas-efficient Solidity library widely used in smart contract development."
+    "title": "Decentralized Programmable Data",
+    "description": "Hyper efficient on-chain data storage solution.",
+    "link": "https://github.com/pentagonxyz/dpd-assembly"
   },
   {
-    "title": "Earn Feature for Waymont",
-    "description": "Integrated a savings-like feature allowing users to earn on deposits, expanding Waymont's offerings."
+    "title": "Tanks",
+    "description": "DeFi product for depositing any asset and earning revenue; coded smart contracts & UI.",
+    "link": "https://github.com/Rari-Capital/rari-tank-contracts"
   },
   {
-    "title": "Decentralized Programmable Data (DPD)",
-    "description": "Created hyper-optimized decentralized data solutions for Pentagon.xyz."
-  },
-  {
-    "title": "Huffmate",
-    "description": "Contributed hyper-optimized smart contracts, pushing the boundaries of gas efficiency."
+    "title": "HackEDU",
+    "description": "Coding classes for underprivileged students."
   }
 ]

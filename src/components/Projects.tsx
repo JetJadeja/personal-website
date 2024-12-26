@@ -9,24 +9,22 @@ function Projects() {
       </h2>
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
         {projectsData.map((proj, idx) => (
-          <div
+          <a
             key={idx}
-            /* 
-               Removed glitch-target from each card so it doesn't 
-               repeatedly glitch on hover or scanning. 
-            */
+            href={proj.link}
+            target="_blank"
+            rel="noopener noreferrer"
             className="border-2 border-white p-6 text-left relative transition-all
                        hover:bg-white hover:text-black 
                        hover:scale-105 
-                       cursor-pointer"
+                       cursor-pointer
+                       block"
           >
             <h3 className="text-3xl font-bold tracking-wide uppercase">
               {proj.title}
             </h3>
-            <p className="mt-4 text-base leading-relaxed">
-              {proj.description}
-            </p>
-          </div>
+            <p className="mt-4 text-base leading-relaxed">{proj.description}</p>
+          </a>
         ))}
       </div>
     </section>
