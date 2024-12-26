@@ -1,0 +1,58 @@
+[
+  {
+    "title": "Fuse v2",
+    "description": "A highly gas-optimized DeFi lending protocol for Rari Capital, cutting user fees by ~90%."
+  },
+  {
+    "title": "Huff",
+    "description": "Revitalized an Ethereum assembly language with 50-90% efficiency gains over existing tools."
+  },
+  {
+    "title": "Tanks",
+    "description": "DeFi product for depositing any asset and earning revenue; coded smart contracts & UI."
+  },
+  {
+    "title": "HackEDU",
+    "description": "Combined coding classes for underprivileged students with an AI-powered learning platform."
+  },
+  {
+    "title": "Waymont Custody Solution",
+    "description": "Secure crypto custody platform; designed web & mobile apps with an intuitive user experience."
+  },
+  {
+    "title": "Generalized Lending Protocol",
+    "description": "Modern, gas-optimized blockchain lending protocol for isolated lending markets."
+  },
+  {
+    "title": "Move Oracles for the Sui Ecosystem",
+    "description": "Created Move modules to bring off-chain data onto Sui, enabling new DeFi use-cases."
+  },
+  {
+    "title": "Translator Pro",
+    "description": "Advanced GPT-4 translation tool more accurate and contextual than mainstream alternatives."
+  },
+  {
+    "title": "Flash Loan Workshop",
+    "description": "Led workshops at UPenn, teaching flash loan implementation in DeFi applications."
+  },
+  {
+    "title": "Vaults for Rari Capital",
+    "description": "Gas-efficient yield aggregator protocol for earning interest on ERC20 tokens."
+  },
+  {
+    "title": "Solmate",
+    "description": "Advised on a secure, gas-efficient Solidity library widely used in smart contract development."
+  },
+  {
+    "title": "Earn Feature for Waymont",
+    "description": "Integrated a savings-like feature allowing users to earn on deposits, expanding Waymont's offerings."
+  },
+  {
+    "title": "Decentralized Programmable Data (DPD)",
+    "description": "Created hyper-optimized decentralized data solutions for Pentagon.xyz."
+  },
+  {
+    "title": "Huffmate",
+    "description": "Contributed hyper-optimized smart contracts, pushing the boundaries of gas efficiency."
+  }
+]
