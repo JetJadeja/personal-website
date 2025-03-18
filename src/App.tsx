@@ -1,10 +1,7 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
-import About from "./components/About";
 import Hero from "./components/Hero";
-import Projects from "./components/Projects";
-import Writing from "./components/Writing";
 import Article from "./components/Article";
 
 function App() {
@@ -17,9 +14,6 @@ function App() {
             element={
               <>
                 <Hero />
-                <About />
-                <Projects />
-                <Writing />
               </>
             }
           />
