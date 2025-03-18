@@ -3,6 +3,12 @@ import React from "react";
 function Hero() {
   return (
     <section className="w-screen h-screen flex items-center justify-center bg-black">
+      <section className="text-white flex justify-between items-center absolute top-0 left-0 right-0 py-8 px-10">
+        <p className="font-[Gunma-Regular] text-l">jet jadeja</p>
+        <p className="font-[Gunma-Regular] text-l cursor-pointer hover:underline">
+          get in touch
+        </p>
+      </section>
       <pre
         // Tailwind classes for monospace, color, spacing, etc.
         // style inlined for the dynamic font-size & letter-spacing
@@ -11,7 +17,7 @@ function Hero() {
           // Dynamically scale the font size based on viewport width
           // clamp(min, preferred, max) ensures it doesn't get too tiny or too huge
           fontSize: "clamp(0.1rem, 0.6vw, 1rem)",
-          // Adjust letterSpacing if it's too “smushed” or “stretched” horizontally
+          // Adjust letterSpacing if it's "smushed" or "stretched" horizontally
           letterSpacing: "0.05em",
           // Add some padding if you like
           padding: "1rem",
