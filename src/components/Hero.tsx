@@ -12,15 +12,19 @@ function Hero() {
       <pre
         // Tailwind classes for monospace, color, spacing, etc.
         // style inlined for the dynamic font-size & letter-spacing
-        className="font-mono text-white leading-[1] whitespace-pre"
+        className="font-mono text-white leading-[1] whitespace-pre w-screen overflow-hidden"
         style={{
           // Dynamically scale the font size based on viewport width
           // clamp(min, preferred, max) ensures it doesn't get too tiny or too huge
           fontSize: "clamp(0.1rem, 0.6vw, 1rem)",
           // Adjust letterSpacing if it's "smushed" or "stretched" horizontally
           letterSpacing: "0.05em",
-          // Add some padding if you like
-          padding: "1rem",
+          // Fill the width of the screen
+          width: "100vw",
+          // Ensure the art is properly centered
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
         }}
       >
         {asciiArt}
