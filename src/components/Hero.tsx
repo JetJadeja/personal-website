@@ -14,91 +14,126 @@ function Hero() {
     setShowContactMenu(!showContactMenu);
   };
 
+  const shimmerStyles = `
+    @keyframes shimmerAnimation {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+    }
+
+    .shimmer-overlay {
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        to right,
+        transparent 0%,
+        rgba(255, 255, 255, 0.9) 25%,
+        rgba(255, 255, 255, 0.9) 50%,
+        rgba(255, 255, 255, 0.9) 75%,
+        transparent 100%
+      );
+      background-size: 200% 100%;
+      mix-blend-mode: overlay;
+      animation: shimmerAnimation 2s infinite linear;
+      z-index: 20;
+    }
+  `;
+
   return (
-    <section className="w-screen h-screen flex items-center justify-center bg-black relative">
-      <section className="text-white flex justify-between items-center absolute top-0 left-0 right-0 py-8 px-10">
-        <p className="font-[Gunma-Regular] text-l">jet jadeja</p>
+    <>
+      <style>{shimmerStyles}</style>
+      <section className="w-screen h-screen flex items-center justify-center bg-black relative">
+        {/* Navigation bar with higher z-index to ensure it's above the shimmer */}
+        <section className="text-white flex justify-between items-center absolute top-0 left-0 right-0 py-8 px-10 z-30">
+          <p className="font-[Gunma-Regular] text-l">jet jadeja</p>
 
-        <div className="relative">
-          <p
-            className="font-[Gunma-Regular] text-l cursor-pointer hover:underline"
-            onClick={toggleContactMenu}
-          >
-            get in touch
-          </p>
+          <div className="relative">
+            <p
+              className="font-[Gunma-Regular] text-l cursor-pointer hover:underline"
+              onClick={toggleContactMenu}
+            >
+              get in touch
+            </p>
 
-          {showContactMenu && (
-            <div className="font-[Gunma-Regular] absolute right-0 mt-2 w-40 bg-black border border-gray-700 shadow-lg py-2 px-3 rounded-md z-10">
-              <a
-                href="mailto:jjadeja@usc.edu"
-                className="flex items-center gap-2 py-2 hover:text-gray-300 transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaEnvelope size={16} />
-                <span>Email</span>
-              </a>
-              <a
-                href="https://twitter.com/jetjadeja"
-                className="flex items-center gap-2 py-2 hover:text-gray-300 transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaTwitter size={16} />
-                <span>Twitter</span>
-              </a>
-              <a
-                href="https://github.com/jetjadeja"
-                className="flex items-center gap-2 py-2 hover:text-gray-300 transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaGithub size={16} />
-                <span>GitHub</span>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/jet-jadeja-2a4023247/"
-                className="flex items-center gap-2 py-2 hover:text-gray-300 transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaLinkedin size={16} />
-                <span>LinkedIn</span>
-              </a>
-              <a
-                href="https://instagram.com/jetjadeja"
-                className="flex items-center gap-2 py-2 hover:text-gray-300 transition-colors"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <FaInstagram size={16} />
-                <span>Instagram</span>
-              </a>
-            </div>
-          )}
+            {showContactMenu && (
+              <div className="font-[Gunma-Regular] absolute right-0 mt-2 w-40 bg-black border border-gray-700 shadow-lg py-2 px-3 rounded-md z-40">
+                <a
+                  href="mailto:jjadeja@usc.edu"
+                  className="flex items-center gap-2 py-2 hover:text-gray-300 transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaEnvelope size={16} />
+                  <span>Email</span>
+                </a>
+                <a
+                  href="https://twitter.com/jetjadeja"
+                  className="flex items-center gap-2 py-2 hover:text-gray-300 transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaTwitter size={16} />
+                  <span>Twitter</span>
+                </a>
+                <a
+                  href="https://github.com/jetjadeja"
+                  className="flex items-center gap-2 py-2 hover:text-gray-300 transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaGithub size={16} />
+                  <span>GitHub</span>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/jet-jadeja-2a4023247/"
+                  className="flex items-center gap-2 py-2 hover:text-gray-300 transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaLinkedin size={16} />
+                  <span>LinkedIn</span>
+                </a>
+                <a
+                  href="https://instagram.com/jetjadeja"
+                  className="flex items-center gap-2 py-2 hover:text-gray-300 transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <FaInstagram size={16} />
+                  <span>Instagram</span>
+                </a>
+              </div>
+            )}
+          </div>
+        </section>
+
+        {/* ASCII Art container positioned to not interfere with navigation */}
+        <div
+          className="relative w-screen flex justify-center items-center"
+          style={{ marginTop: "2rem" }}
+        >
+          <div className="relative">
+            <pre
+              className="font-mono text-white leading-[1] whitespace-pre overflow-hidden z-10"
+              style={{
+                fontSize: "clamp(0.1rem, 0.6vw, 1rem)",
+                letterSpacing: "0.05em",
+                width: "100vw",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              {asciiArt}
+            </pre>
+            <div className="shimmer-overlay absolute inset-0 pointer-events-none"></div>
+          </div>
         </div>
       </section>
-      <pre
-        // Tailwind classes for monospace, color, spacing, etc.
-        // style inlined for the dynamic font-size & letter-spacing
-        className="font-mono text-white leading-[1] whitespace-pre w-screen overflow-hidden"
-        style={{
-          // Dynamically scale the font size based on viewport width
-          // clamp(min, preferred, max) ensures it doesn't get too tiny or too huge
-          fontSize: "clamp(0.1rem, 0.6vw, 1rem)",
-          // Adjust letterSpacing if it's "smushed" or "stretched" horizontally
-          letterSpacing: "0.05em",
-          // Fill the width of the screen
-          width: "100vw",
-          // Ensure the art is properly centered
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        {asciiArt}
-      </pre>
-    </section>
+    </>
   );
 }
 
@@ -106,7 +141,6 @@ export default Hero;
 
 const asciiArt = `
 
-                                                                                                                                                                                                                                                                                                            
                                                                                                                                                                                                                                                                                                             
                                                                                                                                                                                                                                                                                                             
                                                                                                                                                                                                                                                                                                             
@@ -185,6 +219,10 @@ const asciiArt = `
                                                                                                                                                                                         :=#%@#-=+#@@        -=#@@=                                                                                          
                                                                                                                                                                                         =*#@@ =+*%@@        +#@@:                                                                                           
                                                                                                                                                                                         *%%@*  %@@@                                                                                                         
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
                                                                                                                                                                                                                                                                                                             
                                                                                                                                                                                                                                                                                                             
                                                                                                                                                                                                                                                                                                             
