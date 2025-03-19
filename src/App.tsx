@@ -3,9 +3,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Hero from "./components/Hero";
 import About from "./components/About";
-import Projects from "./components/WorkAndProjects";
-import Article from "./components/Article";
+import WorkAndProjects from "./components/WorkAndProjects";
 import Writing from "./components/Writing";
+import Article from "./components/Article";
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
               <>
                 <Hero />
                 <About />
-                <Projects />
+                <WorkAndProjects />
                 <Writing />
               </>
             }
