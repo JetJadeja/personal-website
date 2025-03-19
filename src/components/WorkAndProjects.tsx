@@ -2,99 +2,126 @@ import React from "react";
 import projectsData from "../data/projectsData.json";
 import workExperience from "../data/workData.json";
 
-// Logo component that displays an actual logo if available or a gray placeholder
-function WorkAndProjects() {
-  const Logo = ({ logo }: { logo: string }) => {
+// Work Experience Component
+const WorkExperience = () => {
+  const getLogo = (logo: string) => {
     return (
-      <div className="relative w-8 h-8 bg-gray-500 rounded-md overflow-hidden">
-        {logo && (
-          <img
-            src={logo}
-            alt="Company logo"
-            className="object-cover w-full h-full"
-            onError={(e: React.SyntheticEvent<HTMLImageElement>) => {
-              // Hide the image on error, showing the gray background
-              e.currentTarget.style.display = "none";
-            }}
-          />
-        )}
+      <div className="relative w-10 h-10 bg-gray-800 rounded-md overflow-hidden flex items-center justify-center group-hover:bg-gray-700 transition-colors">
+        <img
+          src={logo}
+          alt="Company logo"
+          className="object-cover w-full h-full"
+          onError={(e) => {
+            // Hide the image on error, showing the gray background
+            e.currentTarget.style.display = "none";
+          }}
+        />
       </div>
     );
   };
 
   return (
-    <section className="w-screen min-h-screen py-16 bg-black text-white">
-      <div className="max-w-2xl mx-auto px-4">
-        {/* Work Experience Section */}
-        <h1 className="font-mono text-xl sm:text-2xl md:text-3xl mb-8 text-center">
-          work
-        </h1>
+    <div>
+      <h1 className="font-mono text-xl sm:text-2xl md:text-3xl mb-12 text-center">
+        work
+      </h1>
 
-        <div className="mb-16">
-          {workExperience.map((job, idx) => (
-            <div key={idx} className="mb-4">
-              <div className="flex items-center py-3 border-b border-dashed border-gray-700">
-                <div className="mr-4">
-                  <Logo logo={job.logo} />
-                </div>
-                <div className="flex-grow">
-                  <div className="flex justify-between items-baseline">
-                    <div>
-                      <span className="font-mono text-base mr-4">
-                        {job.company}
-                      </span>
-                      <span className="font-light text-sm text-gray-400">
-                        {job.role}
-                      </span>
-                    </div>
-                    <span className="font-mono text-sm text-gray-400">
-                      {job.year}
-                    </span>
-                  </div>
-                </div>
-              </div>
+      <div className="mb-16">
+        {/* Work items */}
+        {workExperience.map((job, idx) => (
+          <div key={idx} className={`mb-5 flex items-start group flex-row`}>
+            {/* Logo in center column */}
+            <div className="mx-6 pt-1 z-10">
+              {getLogo(job.logo)}
+              {/* Vertical connecting line except for last item */}
+              {idx !== workExperience.length - 1 && (
+                <div className="h-16 w-px bg-gray-800 mx-auto mt-2 group-hover:bg-gray-700 transition-colors"></div>
+              )}
             </div>
-          ))}
-        </div>
 
-        {/* Projects Section */}
-        <h1 className="font-mono text-xl sm:text-2xl md:text-3xl mb-8 text-center">
-          projects
-        </h1>
+            {/* Content column */}
+            <div className={`flex-1`}>
+              <div className="flex items-baseline mb-1 font-mono text-base">
+                <span className="group-hover:text-gray-300 transition-colors">
+                  {job.company}
+                </span>
+                <span className="text-xs mx-2 text-gray-500">·</span>
+                <span className="text-gray-400 text-sm">{job.year}</span>
+              </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {projectsData.map((project, idx) => (
-            <a
-              key={idx}
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border border-gray-700 p-5 hover:border-white transition-colors group"
-            >
-              <div className="flex justify-between items-start mb-2">
-                <h3 className="font-mono text-base group-hover:underline">
+              <p className="font-light text-sm text-gray-400 italic">
+                {job.role}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+// Projects Component
+const Projects = () => {
+  return (
+    <div>
+      <h1 className="font-mono text-xl sm:text-2xl md:text-3xl mb-12 text-center">
+        projects
+      </h1>
+
+      <div className="space-y-6">
+        {/* Projects as horizontal rows with hover effect */}
+        {projectsData.map((project, idx) => (
+          <a
+            key={idx}
+            href={project.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block pb-3 group hover:border-white transition-all"
+          >
+            <div className="flex justify-between items-center">
+              <div className="flex items-baseline">
+                <span className="font-mono text-xs opacity-50 w-8">
+                  {(idx + 1).toString().padStart(2, "0")}
+                </span>
+                <h3 className="font-mono text-base group-hover:text-gray-300 transition-colors">
                   {project.title}
                 </h3>
-                <svg
-                  className="w-4 h-4 text-gray-500 group-hover:text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                  />
-                </svg>
               </div>
-              <p className="font-light text-sm text-gray-300">
-                {project.description}
-              </p>
-            </a>
-          ))}
-        </div>
+
+              {/* Arrow icon that moves on hover */}
+              <svg
+                className="w-4 h-4 text-gray-500 group-hover:text-white group-hover:translate-x-1 transition-all"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  d="M14 5l7 7m0 0l-7 7m7-7H3"
+                />
+              </svg>
+            </div>
+
+            {/* Description only shows on hover */}
+            <div className="ml-8 font-light text-sm text-gray-400 mt-1 max-h-0 overflow-hidden group-hover:max-h-20 transition-all duration-300">
+              {project.description}
+            </div>
+          </a>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+// Main component that combines the two
+function WorkAndProjects() {
+  return (
+    <section className="w-screen min-h-screen bg-black text-white">
+      <div className="max-w-2xl mx-auto py-16 px-4">
+        <WorkExperience />
+        <Projects />
       </div>
     </section>
   );
