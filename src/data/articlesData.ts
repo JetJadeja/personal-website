@@ -11,7 +11,7 @@ const articlesData: IArticle[] = [
   {
     slug: "01_accelerated_resilience",
     title: "accelerated resilience",
-    date: "2024-03-19",
+    date: "2025-03-19",
     readingTime: "1 min read",
     markdownPath: "01_accelerated_resilience",
   },

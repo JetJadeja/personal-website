@@ -1,18 +1,47 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import {
   FaTwitter,
   FaGithub,
   FaLinkedin,
   FaInstagram,
   FaEnvelope,
+  FaChevronDown,
 } from "react-icons/fa";
 
 function Hero() {
   const [showContactMenu, setShowContactMenu] = useState(false);
+  const [arrowOpacity, setArrowOpacity] = useState(1);
 
   const toggleContactMenu = () => {
     setShowContactMenu(!showContactMenu);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Calculate opacity based on scroll position
+      // Start fading when scroll is at 10% of window height
+      // Completely faded at 30% of window height
+      const scrollPosition = window.scrollY;
+      const fadeStart = window.innerHeight * 0.1;
+      const fadeEnd = window.innerHeight * 0.3;
+
+      if (scrollPosition <= fadeStart) {
+        setArrowOpacity(1);
+      } else if (scrollPosition >= fadeEnd) {
+        setArrowOpacity(0);
+      } else {
+        // Calculate opacity between 1 and 0
+        const opacity =
+          1 - (scrollPosition - fadeStart) / (fadeEnd - fadeStart);
+        setArrowOpacity(opacity);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up event listener
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const shimmerStyles = `
     @keyframes shimmerAnimation {
@@ -40,7 +69,35 @@ function Hero() {
       animation: shimmerAnimation 2s infinite linear;
       z-index: 20;
     }
+
+    @keyframes floatAnimation {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    .floating-arrow {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      animation: floatAnimation 2s ease-in-out infinite;
+      color: white;
+      cursor: pointer;
+      z-index: 30;
+      transition: opacity 0.3s ease;
+    }
   `;
+
+  const scrollToNext = () => {
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: "smooth",
+    });
+  };
 
   return (
     <>
@@ -132,6 +189,15 @@ function Hero() {
             <div className="shimmer-overlay absolute inset-0 pointer-events-none"></div>
           </div>
         </div>
+
+        {/* Floating arrow at the bottom */}
+        <div
+          className="floating-arrow"
+          onClick={scrollToNext}
+          style={{ opacity: arrowOpacity }}
+        >
+          <FaChevronDown size={24} />
+        </div>
       </section>
     </>
   );
@@ -141,6 +207,8 @@ export default Hero;
 
 const asciiArt = `
 
+                                                                                                                                                                                                                                                                                                            
+                                                                                                                                                                                                                                                                                                            
                                                                                                                                                                                                                                                                                                             
                                                                                                                                                                                                                                                                                                             
                                                                                                                                                                                                                                                                                                             
