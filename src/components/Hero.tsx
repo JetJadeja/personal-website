@@ -2,7 +2,7 @@ import React from "react";
 
 function Hero() {
   return (
-    <section className="w-screen h-screen flex items-center justify-center bg-black">
+    <section className="w-screen h-screen flex items-center justify-center bg-black relative">
       <section className="text-white flex justify-between items-center absolute top-0 left-0 right-0 py-8 px-10">
         <p className="font-[Gunma-Regular] text-l">jet jadeja</p>
         <p className="font-[Gunma-Regular] text-l cursor-pointer hover:underline">

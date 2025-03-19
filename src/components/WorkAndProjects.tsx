@@ -118,8 +118,8 @@ const Projects = () => {
 // Main component that combines the two
 function WorkAndProjects() {
   return (
-    <section className="w-screen min-h-screen bg-black text-white">
-      <div className="max-w-2xl mx-auto py-16 px-4">
+    <section className="w-screen bg-black text-white py-16">
+      <div className="max-w-2xl mx-auto px-4">
         <WorkExperience />
         <Projects />
       </div>

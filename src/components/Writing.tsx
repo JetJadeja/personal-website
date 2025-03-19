@@ -9,7 +9,7 @@ function Writing() {
   });
 
   return sortedArticles.length > 0 ? (
-    <section className="w-screen h-screen flex items-center justify-center bg-black text-white relative">
+    <section className="w-screen py-16 flex items-center justify-center bg-black text-white relative">
       <div className="max-w-2xl text-center px-4">
         {/* Heading matches the About and Projects sections' style */}
         <h1 className="font-mono text-xl sm:text-2xl md:text-3xl mb-10">
