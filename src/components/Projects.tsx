@@ -3,29 +3,39 @@ import projectsData from "../data/projectsData.json";
 
 function Projects() {
   return (
-    <section className="min-h-screen px-4 sm:px-8 py-16 bg-black text-white">
-      <h2 className="text-5xl sm:text-6xl md:text-7xl font-extrabold uppercase mb-12 text-center glitch-target">
-        Projects
-      </h2>
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-10">
-        {projectsData.map((proj, idx) => (
-          <a
-            key={idx}
-            href={proj.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="border-2 border-white p-6 text-left relative transition-all
-                       hover:bg-white hover:text-black 
-                       hover:scale-105 
-                       cursor-pointer
-                       block"
-          >
-            <h3 className="text-3xl font-bold tracking-wide uppercase">
-              {proj.title}
-            </h3>
-            <p className="mt-4 text-base leading-relaxed">{proj.description}</p>
-          </a>
-        ))}
+    <section className="w-screen h-screen flex items-center justify-center bg-black text-white relative">
+      <div className="max-w-2xl text-center px-4">
+        {/* Heading matches the About section's style */}
+        <h1 className="font-mono text-xl sm:text-2xl md:text-3xl mb-10">
+          projects
+        </h1>
+
+        {/* Projects list with minimal styling */}
+        <div className="text-left">
+          {projectsData.map((proj, idx) => (
+            <a
+              key={idx}
+              href={proj.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block mb-8 group"
+            >
+              <div className="flex">
+                <span className="font-mono text-xs opacity-60 w-6 pt-1">
+                  {(idx + 1).toString().padStart(2, "0")}
+                </span>
+                <div>
+                  <h3 className="font-mono text-base sm:text-lg group-hover:underline">
+                    {proj.title}
+                  </h3>
+                  <p className="font-light text-sm sm:text-base leading-relaxed mt-1">
+                    {proj.description}
+                  </p>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
       </div>
     </section>
   );

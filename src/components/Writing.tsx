@@ -9,30 +9,37 @@ function Writing() {
   });
 
   return sortedArticles.length > 0 ? (
-    <section className="min-h-screen px-4 sm:px-8 py-16 bg-black text-white">
-      <h2 className="text-5xl sm:text-6xl md:text-7xl font-extrabold uppercase mb-12 text-center glitch-target">
-        Writing
-      </h2>
-      <div className="max-w-3xl mx-auto space-y-8">
-        {sortedArticles.map((article) => (
-          <div
-            key={article.slug}
-            className="border-2 border-white p-6 transition-colors 
-                       hover:bg-white hover:text-black 
-                       hover:underline 
-                       cursor-pointer 
-                       glitch-target"
-          >
-            <Link to={`/article/${article.slug}`} className="block">
-              <h3 className="text-2xl font-bold tracking-wide uppercase">
-                {article.title}
-              </h3>
-              <p className="text-xs text-gray-400 mt-1">
-                {article.date} &middot; {article.readingTime}
-              </p>
+    <section className="w-screen h-screen flex items-center justify-center bg-black text-white relative">
+      <div className="max-w-2xl text-center px-4">
+        {/* Heading matches the About and Projects sections' style */}
+        <h1 className="font-mono text-xl sm:text-2xl md:text-3xl mb-10">
+          writing
+        </h1>
+
+        {/* Articles list with minimal styling */}
+        <div className="text-left">
+          {sortedArticles.map((article, idx) => (
+            <Link
+              key={article.slug}
+              to={`/article/${article.slug}`}
+              className="block mb-8 group"
+            >
+              <div className="flex">
+                <span className="font-mono text-xs opacity-60 w-6 pt-1">
+                  {(idx + 1).toString().padStart(2, "0")}
+                </span>
+                <div>
+                  <h3 className="font-mono text-base sm:text-lg group-hover:underline">
+                    {article.title}
+                  </h3>
+                  <p className="font-light text-xs text-gray-400 mt-1">
+                    {article.date} · {article.readingTime}
+                  </p>
+                </div>
+              </div>
             </Link>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   ) : (

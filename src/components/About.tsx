@@ -2,32 +2,21 @@ import React from "react";
 
 function About() {
   return (
-    <section className="min-h-screen bg-black text-white flex flex-col items-center justify-center px-4 sm:px-8 py-16">
-      <h2 className="text-6xl sm:text-7xl md:text-8xl font-extrabold mb-12 uppercase">
-        About
-      </h2>
-      <div className="max-w-3xl text-center space-y-6 text-lg leading-relaxed">
-        <p>
-          I’m a freshman at the USC Iovine and Young Academy, working at the
-          intersection of engineering, design, and business. My focus is on
+    <section className="w-screen h-screen flex items-center justify-center bg-black text-white relative">
+      {/* Main Content - centered */}
+      <div className="max-w-2xl text-center px-4">
+        {/* Keep a monospace heading for that “techy-chic” vibe */}
+        <h1 className="font-mono text-xl sm:text-2xl md:text-3xl mb-4">
+          about me
+        </h1>
+
+        {/* Simple paragraph with a light font for an airy feel */}
+        <p className="font-light text-sm sm:text-base leading-relaxed">
+          i&apos;m a freshman at the usc iovine &amp; young academy, working at
+          the intersection of engineering, design, and business. my focus is on
           building projects that challenge the status quo, creating spaces that
-          connect and inspire, and exploring the intersection of technology and
-          human connection.
-        </p>
-
-        {/* <p>
-          I started learning to code when I was 10, and I've been building
-          projects ever since. Over the last few years, however, I've taken a
-          break from work. I've focused more on the human experience. I've
-          learned to appreciate art and fashion, and I've enjoyed the moment and
-          the journey.
-        </p> */}
-
-        {/* Updated line to be bold but less cringe */}
-        <p className="font-bold tracking-wide uppercase mt-10 glitch-target">
-          WHAT EXISTS IS ONLY PART OF THE STORY.
-          <br />
-          NOTHING HERE IS FINAL.
+          connect and inspire, and exploring the ever-evolving relationship
+          between technology and human connection.
         </p>
       </div>
     </section>
