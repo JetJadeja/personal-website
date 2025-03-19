@@ -9,11 +9,11 @@ export interface IArticle {
 // Add new articles here, ensuring date sorting is possible
 const articlesData: IArticle[] = [
   {
-    slug: "01_accelerated_resilience.md",
+    slug: "01_accelerated_resilience",
     title: "Accelerated Resilience",
-    date: "2025-03-19",
+    date: "2024-03-19",
     readingTime: "1 min read",
-    markdownPath: "01_accelerated_resilience.md",
+    markdownPath: "01_accelerated_resilience",
   },
   // Add more articles as needed
 ];
