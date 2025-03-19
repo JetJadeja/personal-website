@@ -30,9 +30,7 @@ function Article() {
 
     // Load the markdown file with NO artificial delay
     import(
-      /* webpackChunkName: "markdown" */ `../writing/${
-        foundArticle.markdownPath.split("/").pop()
-      }`
+      /* webpackChunkName: "markdown" */ `../writing/${foundArticle.markdownPath}.md`
     )
       .then((res) => fetch(res.default))
       .then((r) => (r ? r.text() : Promise.reject("No response")))
@@ -81,7 +79,10 @@ function Article() {
 
         <article className="prose prose-invert max-w-none">
           <ReactMarkdown
-            remarkPlugins={[remarkGfm, [remarkRehype, { allowDangerousHtml: false }]]}
+            remarkPlugins={[
+              remarkGfm,
+              [remarkRehype, { allowDangerousHtml: false }],
+            ]}
             rehypePlugins={[
               rehypeSlug,
               [rehypeAutolinkHeadings, { behavior: "wrap" }],
