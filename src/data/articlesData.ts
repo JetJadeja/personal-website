@@ -10,7 +10,7 @@ export interface IArticle {
 const articlesData: IArticle[] = [
   {
     slug: "01_accelerated_resilience",
-    title: "Accelerated Resilience",
+    title: "accelerated resilience",
     date: "2024-03-19",
     readingTime: "1 min read",
     markdownPath: "01_accelerated_resilience",

@@ -1,3 +1,1 @@
-# accelerated resilience
-
-coming soon
+## coming soon
