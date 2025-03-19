@@ -3,7 +3,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Hero from "./components/Hero";
 import About from "./components/About";
-import WorkAndProjects from "./components/WorkAndProjects";
+import Work from "./components/Work";
+import Projects from "./components/Projects";
 import Writing from "./components/Writing";
 import Article from "./components/Article";
 
@@ -29,9 +30,10 @@ function App() {
                   <About />
                 </div>
 
-                {/* Work and Writing sections with consistent spacing */}
+                {/* Work, Projects, and Writing sections with consistent spacing */}
                 <ContentSection>
-                  <WorkAndProjects />
+                  <Work />
+                  <Projects />
                   <Writing />
                 </ContentSection>
               </>
