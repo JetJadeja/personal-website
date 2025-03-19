@@ -70,8 +70,8 @@ function Article() {
       <div className="max-w-3xl mx-auto">
         {articleMeta && (
           <>
-            <h1 className="text-4xl font-bold mb-2">{articleMeta.title}</h1>
-            <p className="text-sm text-gray-400 mb-6">
+            <h1 className="text-4xl font-gunma mb-2">{articleMeta.title}</h1>
+            <p className="text-sm font-sans text-gray-400 mb-6">
               {articleMeta.date} &middot; {articleMeta.readingTime}
             </p>
           </>
@@ -95,7 +95,7 @@ function Article() {
         <div className="mt-8">
           <Link
             to="/"
-            className="underline text-gray-300 hover:text-gray-100 transition"
+            className="underline text-gray-300 hover:text-gray-100 transition font-sans"
           >
             ← Back to home
           </Link>

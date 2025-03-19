@@ -12,7 +12,7 @@ function Writing() {
     <section className="w-screen py-16 flex items-center justify-center bg-black text-white relative">
       <div className="max-w-2xl text-center px-4">
         {/* Heading matches the About and Projects sections' style */}
-        <h1 className="font-mono text-xl sm:text-2xl md:text-3xl mb-10">
+        <h1 className="font-gunma text-xl sm:text-2xl md:text-3xl mb-10">
           writing
         </h1>
 
@@ -29,10 +29,10 @@ function Writing() {
                   {(idx + 1).toString().padStart(2, "0")}
                 </span>
                 <div>
-                  <h3 className="font-mono text-base sm:text-lg group-hover:underline">
+                  <h3 className="font-gunma text-base sm:text-lg group-hover:underline">
                     {article.title}
                   </h3>
-                  <p className="font-light text-xs text-gray-400 mt-1">
+                  <p className="font-sans font-light text-xs text-gray-400 mt-1">
                     {article.date} · {article.readingTime}
                   </p>
                 </div>
