@@ -81,7 +81,7 @@ function Hero() {
 
     .floating-arrow {
       position: absolute;
-      bottom: 30px;
+      bottom: 45px;
       left: 50%;
       transform: translateX(-50%);
       animation: floatAnimation 2s ease-in-out infinite;
