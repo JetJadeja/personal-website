@@ -12,11 +12,10 @@ function About() {
 
         {/* Simple paragraph with a light font for an airy feel */}
         <p className="font-sans font-light text-sm sm:text-base leading-relaxed">
-          i&apos;m a freshman at the usc iovine &amp; young academy, working at
-          the intersection of engineering, design, and business. my focus is on
-          building projects that challenge the status quo, creating spaces that
-          connect and inspire, and exploring the ever-evolving relationship
-          between technology and human connection.
+          i fell in love with computers at age 10. spent the last few years
+          working in crypto, now exploring ai. i like making software and
+          connecting people. in my free time, i'm a student at the usc iovine &
+          young academy.
         </p>
       </div>
     </section>
