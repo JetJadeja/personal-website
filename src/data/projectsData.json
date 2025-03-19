@@ -15,14 +15,9 @@
     "link": "https://github.com/jetjadeja/generalized-lending-protocol"
   },
   {
-    "title": "Vaults v2",
+    "title": "Vaults",
     "description": "Gas-efficient yield aggregator protocol for earning interest on ERC20 tokens.",
     "link": "https://github.com/Rari-Capital/vaults"
-  },
-  {
-    "title": "Flash Loan Workshop",
-    "description": "Led a workshop at UPenn when I was a junior in high school, teaching flash loan implementation in DeFi applications.",
-    "link": "https://github.com/jetjadeja/flash-loan-workshop"
   },
   {
     "title": "Sui Move Oracles",
@@ -33,10 +28,5 @@
     "title": "Decentralized Programmable Data",
     "description": "Hyper efficient on-chain data storage solution.",
     "link": "https://github.com/pentagonxyz/dpd-assembly"
-  },
-  {
-    "title": "Tanks",
-    "description": "DeFi product for depositing any asset and earning revenue; coded smart contracts & UI.",
-    "link": "https://github.com/Rari-Capital/rari-tank-contracts"
   }
 ]
