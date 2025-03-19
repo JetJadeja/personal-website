@@ -10,7 +10,7 @@ import Article from "./components/Article";
 
 // Container component that handles consistent spacing between sections
 const ContentSection = ({ children }: { children: React.ReactNode }) => {
-  return <div className="space-y-16">{children}</div>;
+  return <div className="space-y-60 py-10">{children}</div>;
 };
 
 function App() {
@@ -25,13 +25,12 @@ function App() {
                 {/* Hero takes full viewport height */}
                 <Hero />
 
-                {/* About section sits right below the viewport */}
-                <div className="mt-0">
-                  <About />
-                </div>
-
                 {/* Work, Projects, and Writing sections with consistent spacing */}
                 <ContentSection>
+                  {/* About section sits right below the viewport */}
+                  <div className="mt-0">
+                    <About />
+                  </div>
                   <Work />
                   <Projects />
                   <Writing />

@@ -3,9 +3,9 @@ import projectsData from "../data/projectsData.json";
 
 function Projects() {
   return (
-    <section className="w-screen bg-black text-white py-16">
+    <section className="w-screen bg-black text-white">
       <div className="max-w-2xl mx-auto px-4">
-        <h1 className="font-gunma text-xl sm:text-2xl md:text-3xl mb-12 text-center">
+        <h1 className="font-mono text-xl sm:text-2xl md:text-3xl mb-12 text-center">
           projects
         </h1>
 
@@ -21,12 +21,12 @@ function Projects() {
               <div className="flex items-start group">
                 {/* Right side - content */}
                 <div className="flex-1">
-                  <h3 className="font-gunma text-base group-hover:underline">
-                    {project.title}
+                  <h3 className="font-mono text-base group-hover:underline">
+                    {project.title.toLowerCase()}
                   </h3>
 
-                  <p className="font-sans font-light text-sm text-gray-300 mt-2">
-                    {project.description}
+                  <p className="font-light text-sm text-gray-300 mt-2">
+                    {project.description.toLowerCase()}
                   </p>
                 </div>
               </div>

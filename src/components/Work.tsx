@@ -21,11 +21,11 @@ function Work() {
   return (
     <section className="w-screen bg-black text-white">
       <div className="max-w-2xl mx-auto px-4">
-        <h1 className="font-gunma text-xl sm:text-2xl md:text-3xl mb-12 text-center">
+        <h1 className="font-mono text-xl sm:text-2xl md:text-3xl mb-12 text-center">
           work
         </h1>
 
-        <div className="mb-16">
+        <div className="">
           {/* Work items */}
           {workExperience.map((job, idx) => (
             <div key={idx} className={`mb-5 flex items-start group flex-row`}>
@@ -40,7 +40,7 @@ function Work() {
 
               {/* Content column */}
               <div className={`flex-1`}>
-                <div className="flex items-baseline mb-1 font-sans text-base">
+                <div className="flex items-baseline mb-1 font-mono text-base">
                   <span className="group-hover:text-gray-300 transition-colors">
                     {job.company.toLowerCase()}
                   </span>
@@ -48,7 +48,7 @@ function Work() {
                   <span className="text-gray-400 text-sm">{job.year}</span>
                 </div>
 
-                <p className="font-sans font-light text-sm text-gray-400 italic">
+                <p className="font-light text-sm text-gray-400 italic">
                   {job.role.toLowerCase()}
                 </p>
               </div>
