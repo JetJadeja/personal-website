@@ -12,8 +12,8 @@ function About() {
 
         {/* Simple paragraph with a light font for an airy feel */}
         <p className="font-sans font-light text-sm sm:text-base leading-relaxed">
-          i fell in love with computers at age 10. spent the last few years
-          working in crypto, now exploring ai. i like making software and
+          i fell in love with computers at age 10. spent the last few years exploring crypto and ai,
+          now heads down building onchain. i like making software and
           connecting people. in my spare time, i'm a student at the usc iovine &
           young academy.
         </p>
