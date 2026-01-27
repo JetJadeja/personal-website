@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Analytics } from "@vercel/analytics/react";
 import Layout from "./components/Layout";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -41,6 +42,7 @@ function App() {
           <Route path="/article/:slug" element={<Article />} />
         </Routes>
       </Layout>
+      <Analytics />
     </BrowserRouter>
   );
 }
